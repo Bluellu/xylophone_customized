@@ -17,11 +17,7 @@ class XylophoneApp extends StatelessWidget {
               child: TextButton(
                 onPressed: () async {
                   final player = AudioPlayer();
-                  //AudioCache cache = new AudioCache();
-                  //cache.load('assets/note1.wav');
-                  //player.audioCache = cache;
-
-                  //await player.play(DeviceFileSource('assets'));
+                  await player.play(AssetSource('note1.wav'));
                 },
                 child: const Text('Click Me'),
             ),
